@@ -1,9 +1,8 @@
 {
-  "name": "digital-cow-hut",
+  "name": "cow-hut-backend",
   "version": "1.0.0",
   "description": "",
   "main": "src/server.ts",
-  "private": "true",
   "scripts": {
     "start": "ts-node-dev --respawn --transpile-only src/server.ts",
     "lint:check": "eslint --ignore-path .eslintignore --ext .js,.ts",
@@ -11,16 +10,16 @@
     "prettier:check": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
     "prettier:fix": "prettier --write .",
     "lint:prettier": "yarn lint:check && yarn prettier:check",
-    "postinstall": "husky install",
-    "prepack": "pinst --disable",
-    "postpack": "pinst --enable",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ishtiaq Ahammed",
   "license": "ISC",
+  "lint-staged": {
+    "src/**/*.ts": "yarn lint-prettier"
+  },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.17.0",
-    "@typescript-eslint/parser": "^6.17.0",
+    "@typescript-eslint/eslint-plugin": "^6.18.0",
+    "@typescript-eslint/parser": "^6.18.0",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "eslint": "^8.56.0",
