@@ -27,7 +27,8 @@
     "http-status": "^1.7.3",
     "mongodb": "^6.3.0",
     "mongoose": "^8.0.3",
-    "yarn": "^1.22.21"
+    "yarn": "^1.22.21",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
